@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1534931383568.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2BDCDA54",
+    "lastKnownWriteTime" : 1536055042,
+    "last_content_update" : 1536055042890,
+    "path" : "~/My R Packages/AIExam/R/MCMC.R",
+    "project_path" : "R/MCMC.R",
+    "properties" : {
+        "cursorPosition" : "106,42",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

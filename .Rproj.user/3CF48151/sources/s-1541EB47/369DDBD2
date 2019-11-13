@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1534931233967.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "369DDBD2",
+    "lastKnownWriteTime" : 1536055043,
+    "last_content_update" : 1536055043008,
+    "path" : "~/My R Packages/AIExam/R/AStar.R",
+    "project_path" : "R/AStar.R",
+    "properties" : {
+        "cursorPosition" : "128,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

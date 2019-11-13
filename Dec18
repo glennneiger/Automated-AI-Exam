@@ -1,0 +1,236 @@
+\documentclass{article}
+ \usepackage[utf8]{inputenc}
+ \usepackage{graphicx}
+ \graphicspath{ {images/} }
+ \begin{document}
+
+ \title{ARTIFICIAL INTELLIGENCE EXAM}
+ \author{Course Code: 1DL340}
+ \date{Ref.  This is a student generated exam. }
+ \maketitle
+
+ This exam has  6  questions for a total of  21  marks. Grade boundaries are:
+
+ \begin{center}
+ 3 -  10.5 
+
+ 4 -  14.0 
+
+ 5 -  17.5 
+
+ \end{center}
+
+ In exceptional circumstances these boundaries may be adjusted at the discretion of the examiner. This would be done on an exam-wide basis, NOT for individual students.
+
+ You are permitted to make use of a calculator and language dictionary in this exam.
+\clearpage
+\section{MCMC and Directed Graphical Models}
+
+Tables~\ref{MCMC1} to~\ref{MCMC5} provide the conditional probability distributions for a directed graphical model.
+
+A. Use this information to draw the graph of the associated directed graphical model. (1 mark)
+
+B. Table~\ref{MCMC6} provides observed values for some of the nodes. Given these, the initial values provided in Table~\ref{MCMC7} and the random numbers provided below, use the Metropolis within Gibbs MCMC sampling algorithm to generate two complete samples of the variables. Assume that the candidate function gives the opposite of the current value. At each step, explain what value you are considering, what the current and candidate values are, and why you updated it or did not update it. (4 marks)
+
+Random numbers: 0.445,0.869,0.388,0.618,0.828,0.312 
+\begin{table}[h!]
+\caption{P(A)}
+\label{MCMC1}
+\begin{center}
+\begin{tabular}{ |c||c|c| } 
+\hline
+ - & A=F & A=T\\
+\hline
+ & 0.4 & 0.6\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[h!]
+\caption{P(B$|$A)}
+\label{MCMC2}
+\begin{center}
+\begin{tabular}{ |c||c|c| } 
+\hline
+ A & B=F & B=T\\
+\hline
+ A=F & 0.9 & 0.1\\
+ A=T & 0.9 & 0.1\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[h!]
+\caption{P(C$|$A)}
+\label{MCMC3}
+\begin{center}
+\begin{tabular}{ |c||c|c| } 
+\hline
+ A & C=F & C=T\\
+\hline
+ A=F & 0.9 & 0.1\\
+ A=T & 0.7 & 0.3\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[h!]
+\caption{P(D$|$B,C)}
+\label{MCMC4}
+\begin{center}
+\begin{tabular}{ |c|c||c|c| } 
+\hline
+ B & C & D=F & D=T\\
+\hline
+ B=F & C=F & 0.35 & 0.65\\
+ B=F & C=T & 0.35 & 0.65\\
+ B=T & C=F & 0.55 & 0.45\\
+ B=T & C=T & 0.4 & 0.6\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[h!]
+\caption{P(E$|$C)}
+\label{MCMC5}
+\begin{center}
+\begin{tabular}{ |c||c|c| } 
+\hline
+ C & E=F & E=T\\
+\hline
+ C=F & 0.2 & 0.8\\
+ C=T & 0.4 & 0.6\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[h!]
+\caption{Observed Values}
+\label{MCMC6}
+\begin{center}
+\begin{tabular}{ |c|c| } 
+\hline
+ Node & Value \\
+\hline
+E & FALSE\\
+D & TRUE\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[h!]
+\caption{Initial Values}
+\label{MCMC7}
+\begin{center}
+\begin{tabular}{ |c|c| } 
+\hline
+ Node  & Value \\
+\hline
+A & TRUE\\
+B & TRUE\\
+C & TRUE\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\clearpage
+\section{Hidden Markov Models: Forward-Backward Algorithm}
+
+Tables~\ref{hmmfb1} to~\ref{hmmfb4} provide the transition matrix, emission matrix, initial state and a sequence of observations for a hidden Markov model. Use the forward-backward algorithm to calculate the probability distributions for the state of the system at times 0, 1 and 2 given the observations. Show all working. (4 marks)
+
+\begin{table}[h!]
+\caption{Transition Matrix}
+\label{hmmfb1}
+\begin{center}
+\begin{tabular}{ |c||c|c| } 
+\hline
+ $S_{t-1}$ & $S_t$=0 & $S_t$=1\\
+\hline
+ 0 & 0.7 & 0.3\\
+ 1 & 0.8 & 0.2\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[h!]
+\caption{Emission Matrix}
+\label{hmmfb2}
+\begin{center}
+\begin{tabular}{ |c||c|c| } 
+\hline
+ $S$ & $E=0$ & $E=1$\\
+\hline
+ 0 & 0.6 & 0.4\\
+ 1 & 0.4 & 0.6\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[h!]
+\caption{Initial State}
+\label{hmmfb3}
+\begin{center}
+\begin{tabular}{ |c|c| } 
+\hline
+ $S=0$ & $S=1$\\
+\hline
+0.5 & 0.5\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[h!]
+\caption{Observations}
+\label{hmmfb4}
+\begin{center}
+\begin{tabular}{ |c|c| } 
+\hline
+ Time=1 & Time=2\\
+\hline
+FALSE & FALSE\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\clearpage
+\section{Scheduling}
+
+Provide a complete resource constrained schedule for the actions found in Table~\ref{schActions}. (4 marks)
+\begin{table}[h!]
+\caption{Actions}
+\label{schActions}
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c|c| } 
+\hline
+ Index & Action & Duration & Uses & Consumes & After \\
+\hline
+1 & Start & 0 &   & 0 nails & NA\\
+2 & Action 1 & 40 &   & 0 nails & 1\\
+3 & Action 2 & 35 &  Saw & -1 nail & 1\\
+4 & Action 3 & 30 &   & -1 nail & 1\\
+5 & Action 4 & 30 &   & 0 nails & 2\\
+6 & Action 5 & 40 &  Saw & 1 nail & 3,5,4\\
+7 & Action 6 & 45 &  Saw & 1 nail & 4,5,3\\
+8 & Action 7 & 35 &  Hammer & 0 nails & 4,6,7\\
+9 & Finish & 0 &   & 0 nails & 8\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\clearpage
+\section{Basic Feed-Forward ANNs}
+
+Examine the neural network given in the diagram labelled 'Basic Regression Feed-Forward Neural Network'. In this diagram, square nodes represent biases, blue nodes the input layer, green nodes a hidden layer, and red nodes the output layer. The first round blue input node is associated with feature X1, and the second with feature X2 (counting downwards). Assuming that all activation functions are rectifiers (i.e. the hidden nodes are ReLU units), and the output is a basic linear regression function, calculate the output of this network if it was given an input of X1 = 9 and X2 = 0. Show all working. (2 Marks)
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{ffnn.jpg}
+\end{figure}
+\clearpage
+\section{ LSTMs }
+
+Explain the steps involving the memory vector in a pass through a LSTM layer at time t. Mention what is done to the memory vector (non-mathematically) and/or what the memory vector is used for in each of these steps. Make reference to the input at time t, and the outputs of time t-1 and t. (2 marks)\clearpage
+\section{ PDDL }
+
+What is PDDL? Explain all components of a PDDL problem. Be as precise and concise as possible.  (4 marks)
+
+\end{document}

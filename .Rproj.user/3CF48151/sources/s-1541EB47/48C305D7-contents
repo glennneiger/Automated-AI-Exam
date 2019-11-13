@@ -1,0 +1,22 @@
+# Make an empty frontier
+frontier=list()
+# Make some demo nodes (I track the path of moves, not nodes visited)
+node1=list(x=1,y=1,so_far=4,heuristic=6,path=c(4,2))
+node2=list(x=3,y=2,so_far=14,heuristic=3,path=c(8,4,4,2))
+node3=list(x=1,y=4,so_far=5,heuristic=7,path=c(4,2,4))
+# Add the nodes to the froniter
+# Note we place the nodes in a list when appending
+frontier=append(frontier,list(node1))
+frontier=append(frontier,list(node2))
+frontier=append(frontier,list(node3))
+# We can get a vector of values to order by applying a function
+# to each element of the frontier list:
+cost=sapply(frontier,function(n)n$so_far+n$heuristic)
+# We find the list index of the node with minimal cost
+next_index=which.min(cost)
+# Now we grab it from the froniter
+# Note the double brackets
+next_node=frontier[[next_index]]
+# And we remove the node chosen from the frontier
+# Note the single brackets
+frontier=frontier[-next_index]

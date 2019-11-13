@@ -1,0 +1,25 @@
+step_matrix=function(frontier) {
+  # We find the list index of the node with minimal cost
+  next_index=which.min(frontier[,3]+frontier[,4])
+  # Now we grab it from the froniter
+  # Note the double brackets
+  next_node=frontier[next_index,]
+  frontier=frontier[-next_index,]
+  
+  node1=c(1,1,sample(1:100,1),sample(1:100,1),4,2,NA,NA)
+  node2=c(3,2,sample(1:100,1),sample(1:100,1),8,4,4,2)
+  rbind(frontier,rbind(node1,node2))
+}
+run_matrix=function (n) {
+  node1=c(1,1,sample(1:100,1),sample(1:100,1),4,2,NA,NA)
+  frontier=matrix(node1,nrow=1)
+  for (i in 1:n) {
+    frontier=step_matrix(frontier)
+  }
+}
+start_matrix=function(n=1000){
+  t1=Sys.time()
+  run_matrix(n)
+  t2=Sys.time()
+  print(as.numeric(t2)-as.numeric(t1))
+}

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1536054285303.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7B08D543",
+    "lastKnownWriteTime" : 1536055042,
+    "last_content_update" : 1536055042968,
+    "path" : "~/My R Packages/AIExam/R/schedule.R",
+    "project_path" : "R/schedule.R",
+    "properties" : {
+        "cursorPosition" : "380,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

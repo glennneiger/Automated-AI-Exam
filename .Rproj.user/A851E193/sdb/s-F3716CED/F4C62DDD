@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "f100=function(i_) {\n  sapply(i_,function(i) {\n    sqrt(sum(sapply(1:i,function(j)1)))\n  })\n}\nf75=function(i_) {\n  sapply(i_,function(i) {\n    sqrt(sum(sapply(1:i,function(j).75^2)))\n  })\n}\nf50=function(i_) {\n  sapply(i_,function(i) {\n    sqrt(sum(sapply(1:i,function(j).5^2)))\n  })\n}\nf25=function(i_) {\n  sapply(i_,function(i) {\n    sqrt(sum(sapply(1:i,function(j).25^2)))\n  })\n}\nfrand=function(i_) {\n  sapply(i_,function(i) {\n    mean(sapply(1:10,function(k) {\n      sqrt(sum(sapply(1:i,function(j)(runif(1)-runif(1))^2)))\n    }))\n  })\n}",
+    "created" : 1509470139222.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "80843486",
+    "id" : "F4C62DDD",
+    "lastKnownWriteTime" : 7813590796663464571,
+    "last_content_update" : 1512824463413,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

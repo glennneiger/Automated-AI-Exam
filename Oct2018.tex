@@ -1,0 +1,229 @@
+\documentclass{article}
+ \usepackage[utf8[1] "Transition Matrix:"
+               state(t+1)=False state(t+1)=True
+state(t)=False              0.8             0.2
+state(t)=True               0.9             0.1
+[1] "Emission Matrix:"
+            emission=False emission=True
+state=False            0.7           0.3
+state=True             0.5           0.5
+[1] "Initial State:"
+state(0)=False  state(0)=True 
+           0.5            0.5 
+[1] "Observations:"
+emission(1) emission(2) 
+       TRUE        TRUE 
+[1] "Step 1: Path Node Probabilities"
+[1] 0.135 0.050
+[1] "Step 1: Path Step Origins"
+[1] "TRUE"  "FALSE"
+[1] "Path Node Probabilities"
+[1] 0.0324 0.0135
+[1] "Step 1: Path Step Origins"
+[1] "FALSE" "FALSE"
+[1] "Most probable path: TRUE FALSE FALSE"
+[1] "Probabality: 0.0324"
+[1] "Transition Matrix:"
+               state(t+1)=False state(t+1)=True
+state(t)=False              0.5             0.5
+state(t)=True               0.5             0.5
+[1] "Emission Matrix:"
+            emission=False emission=True
+state=False            0.5           0.5
+state=True             0.3           0.7
+[1] "Initial State:"
+state(0)=False  state(0)=True 
+           0.5            0.5 
+[1] "Observations:"
+emission(1) emission(2) 
+      FALSE       FALSE 
+[1] "Step 1: Path Node Probabilities"
+[1] 0.125 0.075
+[1] "Step 1: Path Step Origins"
+[1] "FALSE" "FALSE"
+[1] "Path Node Probabilities"
+[1] 0.03125 0.01875
+[1] "Step 1: Path Step Origins"
+[1] "FALSE" "FALSE"
+[1] "Most probable path: FALSE FALSE FALSE"
+[1] "Probabality: 0.03125"
+[1] "Transition Matrix:"
+               state(t+1)=False state(t+1)=True
+state(t)=False              0.2             0.8
+state(t)=True               0.2             0.8
+[1] "Emission Matrix:"
+            emission=False emission=True
+state=False            0.1           0.9
+state=True             0.2           0.8
+[1] "Initial State:"
+state(0)=False  state(0)=True 
+           0.5            0.5 
+[1] "Observations:"
+emission(1) emission(2) 
+       TRUE       FALSE 
+[1] "Forward Values:"
+[1] 0.5 0.5
+[1] 0.18 0.64
+[1] 0.0164 0.1312
+[1] "Backward Values:"
+[1] 0.1476 0.1476
+[1] 0.18 0.18
+[1] 1 1
+[1] "State Probabilities:"
+[1] 0.5 0.5
+[1] 0.2195122 0.7804878
+[1] 0.1111111 0.8888889
+[1] "Transition Matrix:"
+               state(t+1)=False state(t+1)=True
+state(t)=False              0.6             0.4
+state(t)=True               0.7             0.3
+[1] "Emission Matrix:"
+            emission=False emission=True
+state=False            0.3           0.7
+state=True             0.7           0.3
+[1] "Initial State:"
+state(0)=False  state(0)=True 
+           0.5            0.5 
+[1] "Observations:"
+emission(1) emission(2) 
+      FALSE        TRUE 
+[1] "Forward Values:"
+[1] 0.5 0.5
+[1] 0.195 0.245
+[1] 0.20195 0.04545
+[1] "Backward Values:"
+[1] 0.2596 0.2352
+[1] 0.54 0.58
+[1] 1 1
+[1] "State Probabilities:"
+[1] 0.5246564 0.4753436
+[1] 0.4256265 0.5743735
+[1] 0.8162894 0.1837106
+ne
+ Node  & Value \\
+\hline
+B & FALSE\\
+C & FALSE\\
+E & FALSE\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\clearpage
+\section{Scheduling}
+
+Provide a complete resource constrained schedule for the actions found in Table~\ref{schActions}. (4 marks)
+
+Please note that the values in the 'After' column refer to the \textit{index} of the action. So '1' refers to Start, not Action 1.
+
+\begin{table}[h!]
+\caption{Actions}
+\label{schActions}
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c|c| } 
+\hline
+ Index & Action & Duration & Uses & Consumes & After \\
+\hline
+1 & Start & 0 &   & 0 nails & NA\\
+2 & Action 1 & 50 &  Saw & 0 nails & 1\\
+3 & Action 2 & 45 &  Saw & -1 nail & 1\\
+4 & Action 3 & 25 &  Saw & -1 nail & 1\\
+5 & Action 4 & 5 &   & 0 nails & 4,3\\
+6 & Action 5 & 25 &   & 1 nail & 3,5,4\\
+7 & Action 6 & 50 &  Saw & 1 nail & 5,6,2,3,4\\
+8 & Action 7 & 10 &  Saw,Hammer & 0 nails & 4\\
+9 & Finish & 0 &   & 0 nails & 7,8\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\clearpage
+\section{Multi-Armed Bandit Optimization}
+
+Image we are testing click through rates on three different web layouts. At the current point, the Dirichlet (beta) distributions associated with each layout have the parameters in Table~\ref{MABO1}.\begin{table}[h!]
+\caption{Dirichlet (Beta) Parameters for Layout}
+\label{MABO1}
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+\hline
+ Layout & Parameter 1 & Parameter 2 \\
+\hline
+A &  8  &  5 \\
+B &  10  &  6 \\
+C &  10  &  4 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+The first value is associated with not clicking through, the second clicking through.
+
+A new person views the site. We generate samples from the distributions to determine which layout is used. These samples are given in Table~\ref{MABO2}.
+\begin{table}[h!]
+\caption{Samples from Layout Dirichlet (Beta) Distributions}
+\label{MABO2}
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c|c| } 
+\hline
+ Layout & Sample 1 & Sample 2 & Sample 3 & Sample 4 & Sample 5 \\
+\hline
+A &  0.56  &  0.41  &  0.25  &  0.36  &  0.41 \\
+B &  0.6  &  0.34  &  0.36  &  0.37  &  0.41 \\
+C &  0.38  &  0.45  &  0.31  &  0.43  &  0.25 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+When shown the website with the chosen layout, the person makes a purchase ('clicks through'). Give the new parameters of the three distributions after this event. (2 Marks)
+\clearpage
+\section{Convolution layers in CNNs}
+
+Tables~\ref{CNN1} to~\ref{CNN3} provide an input matrix and two filter matrices for a convolutional layer in a CNN. Assuming no padding, that stride is [1,1], and that all activation functions are rectifiers, calculate the output of this layer. (2 marks)
+\begin{table}[h!]
+\caption{Input Matrix}
+\label{CNN1}
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+\hline
+1  &  5  &  -1 \\
+0  &  -4  &  -1 \\
+4  &  -5  &  1 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[h!]
+\caption{Filter 1}
+\label{CNN2}
+\begin{center}
+\begin{tabular}{ |c|c| } 
+\hline
+-2  &  3 \\
+2  &  4 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[h!]
+\caption{Filter 1}
+\label{CNN3}
+\begin{center}
+\begin{tabular}{ |c|c| } 
+\hline
+2  &  3 \\
+0  &  3 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\clearpage
+\section{ Depth-First Search }
+
+Under what conditions could a depth-first search FAIL to find a solution (in a finite search space with at most a single edge between any two nodes)? (1 mark)\clearpage
+\section{ Bias-Variance }
+
+Give a basic explanation (as per what was discussed in the course) of the bias and variance components of expected error and their relationship to model complexity. (3 marks)
+
+\end{document}

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1534930754927.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "16A3229F",
+    "lastKnownWriteTime" : 1536055417,
+    "last_content_update" : 1536055417033,
+    "path" : "~/My R Packages/AIExam/R/Exam.R",
+    "project_path" : "R/Exam.R",
+    "properties" : {
+        "cursorPosition" : "64,22",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

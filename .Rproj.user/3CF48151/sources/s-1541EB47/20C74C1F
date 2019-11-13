@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1534931647181.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "20C74C1F",
+    "lastKnownWriteTime" : 1536055043,
+    "last_content_update" : 1536055043228,
+    "path" : "~/My R Packages/AIExam/R/alphabeta.R",
+    "project_path" : "R/alphabeta.R",
+    "properties" : {
+        "cursorPosition" : "193,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

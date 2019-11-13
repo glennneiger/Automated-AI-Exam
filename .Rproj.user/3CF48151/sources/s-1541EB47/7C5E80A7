@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1536054171912.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2979260543",
+    "id" : "7C5E80A7",
+    "lastKnownWriteTime" : 1571914529,
+    "last_content_update" : 1571914529797,
+    "path" : "~/My R Packages/AIExam/R/HMM_FB.R",
+    "project_path" : "R/HMM_FB.R",
+    "properties" : {
+        "cursorPosition" : "220,110",
+        "scrollLine" : "207"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

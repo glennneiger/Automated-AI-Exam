@@ -1,0 +1,9 @@
+f=function(oldU,r,t) {
+  sapply(c(1,3),function(state){
+    sapply(1:4, function(action){
+      s=state
+      if(state==3) s=2
+      sum(t[(s-1)*4+action,]*r)
+    })
+  })
+}

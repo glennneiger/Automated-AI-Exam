@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1535975000182.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "96980198",
+    "id" : "A75B071C",
+    "lastKnownWriteTime" : 1536055042,
+    "last_content_update" : 1536055042828,
+    "path" : "~/My R Packages/AIExam/R/multiarmed_bandit.R",
+    "project_path" : "R/multiarmed_bandit.R",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

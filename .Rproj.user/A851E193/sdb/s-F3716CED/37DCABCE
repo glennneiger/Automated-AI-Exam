@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "setupANN=function(){\n  weights1=matrix(sample(-9:9,6,T),nrow=3)\n  weights2=matrix(sample(-9:9,3,T),nrow=3)\n  inputs=sample(-10:10,2)\n  plot.new()\n  plot.window(xlim=c(0,4),ylim=c(0,4))\n  segments(c(1,1,1,1,1,1),c(1,2,3,1,2,3),\n           c(2,2,2,2,2,2),c(1,1,1,2,2,2))\n  segments(c(2,2,2),c(1,2,3),c(3,3,3),c(2,2,2))\n\n  points(c(1,1,1),c(1,2,3),cex=3,pch=c(16,16,15),col=c(\"light blue\",\"light blue\",\"light blue\"))\n  points(c(2,2,2),c(1,2,3),cex=3,pch=c(16,16,15),col=c(\"green\",\"green\",\"green\"))\n  points(c(3),c(2),cex=3,pch=16,col=c(\"red\"))\n\n  text(1.2,.75,weights1[1,1])\n  text(1.4,1.2,weights1[1,2])\n  text(1.2,1.6,weights1[2,1])\n  text(1.4,1.84,weights1[2,2])\n  text(1.2,2.35,weights1[3,1])\n  text(1.2,3.1,weights1[3,2])\n\n  text(2.2,0.9,weights2[1,1])\n  text(2.2,1.84,weights2[2,1])\n  text(2.2,3.1,weights2[3,1])\n  title(\"Basic Regression Feed-Forward Neural Network\")\n\n  list(weights1=weights1,weights2=weights2,inputs=inputs)\n}\nsolveANN=function(info){\n  weights1=info$weights1\n  weights2=info$weights2\n  inputs=info$inputs\n\n  cat(\"The value of the first non-bias hidden node (counting downwards) is:\\n\")\n  h1=max(0,inputs[1]*weights1[2,2]+inputs[2]*weights1[1,2]+weights1[3,2])\n  cat(\"max ( 0 , [ \",inputs[1],\" x \",weights1[2,2],\" + \",inputs[2],\" x \",weights1[1,2],\" + \",weights1[3,2],\" ] ) = \",h1,\"\\n\",sep=\"\")\n\n  cat(\"The value of the second non-bias hidden node (counting downwards) is:\\n\")\n  h2=max(0,inputs[1]*weights1[2,1]+inputs[2]*weights1[1,1]+weights1[3,1])\n  cat(\"max ( 0 , [ \",inputs[1],\" x \",weights1[2,1],\" + \",inputs[2],\" x \",weights1[1,1],\" + \",weights1[3,1],\" ] ) = \",h2,\"\\n\",sep=\"\")\n\n  cat(\"The value of the output node is:\\n\")\n  o=h1*weights2[2,1]+h2*weights2[1,1]+weights2[3,1]\n  cat(h1,\" x \",weights2[2,1],\" + \",h2,\" x \",weights2[1,1],\" + \",weights2[3,1],\" = \",o,\"\\n\",sep=\"\")\n}\nmakeQuestionFFNN=function(seed=NA,answer=T,latex=F,imageFilename=NULL){\n  if (!is.na(seed))\n    set.seed(seed)\n\n  if (!is.null(imageFilename))\n    jpeg(imageFilename)\n  info=setupANN()\n  if (!is.null(imageFilename))\n    dev.off()\n\n  if (latex) {\n    cat(\"\\\\clearpage\\n\")\n    cat(\"\\\\section{Basic Feed-Forward ANNs}\\n\\n\")\n\n    cat(\"Examine the neural network given in the diagram labelled 'Basic Regression Feed-Forward Neural Network'. \",\n        \"In this diagram, square nodes represent biases, blue nodes the input layer, green nodes a hidden layer, and red nodes the output layer. \",\n        \"The first round blue input node is associated with feature X1, and the second with feature X2 (counting downwards). \",\n        \"Assuming that all activation functions are rectifiers (i.e. the hidden nodes are ReLU units), and the output is a basic linear regression function, calculate the output of this network if it was given an input of X1 = \",info$inputs[1],\" and X2 = \",info$inputs[2],\". Show all working. (2 Marks)\\n\",\n        sep=\"\")\n  }\n  else {\n    cat(\"Consider the network in the diagram. \")\n    cat(\"Square nodes represent biases, blue nodes the input layer, green nodes a hidden layer, and red nodes the output layer. \")\n    cat(\"X1 is the first round blue node, and X2 the second (counting downwards).\\n\")\n    cat(\"Assuming that all activation functions are rectifiers (i.e. the hidden nodes are ReLU units), and the output is a basic linear regression function, calculate the output of this network if it was given an input of X1 = \",info$inputs[1],\" and X2 = \",info$inputs[2],\". Show all working.\\n\")\n  }\n  if (answer) {\n    readline(\"Press Enter to see the answer...\")\n    solveANN(info)\n  }\n}\n",
+    "created" : 1512684416626.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1078362397",
+    "id" : "37DCABCE",
+    "lastKnownWriteTime" : 1512849369,
+    "last_content_update" : 1512849369139,
+    "path" : "C:/Users/Acer/Desktop/Dokument/AI/2017/AIExam/R/ANN.R",
+    "project_path" : "R/ANN.R",
+    "properties" : {
+        "tempName" : "Untitled4"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

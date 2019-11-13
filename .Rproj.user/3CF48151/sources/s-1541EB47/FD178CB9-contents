@@ -1,0 +1,27 @@
+step_list=function(frontier) {
+  cost=sapply(frontier,function(n)n$so_far+n$heuristic)
+  # We find the list index of the node with minimal cost
+  next_index=which.min(cost)
+  # Now we grab it from the froniter
+  # Note the double brackets
+  next_node=frontier[[next_index]]
+  frontier=frontier[-next_index]
+  
+  node1=list(x=1,y=1,so_far=sample(1:100,1),heuristic=sample(1:100,1),path=c(4,2))
+  node2=list(x=3,y=2,so_far=sample(1:100,1),heuristic=sample(1:100,1),path=c(8,4,4,2))
+  append(frontier,list(node1,node2))
+}
+run_list=function (frontier,n=1000) {
+  node1=list(x=1,y=1,so_far=sample(1:100,1),heuristic=sample(1:100,1),path=c(4,2))
+  frontier=append(frontier,list(node1))
+  for (i in 1:n) {
+    frontier=step_list(frontier)
+  }
+}
+start_list=function(n=1000){
+  t1=Sys.time()
+  frontier=list()
+  run_list(frontier,n)
+  t2=Sys.time()
+  print(as.numeric(t2)-as.numeric(t1))
+}

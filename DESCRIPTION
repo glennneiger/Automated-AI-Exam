@@ -1,0 +1,11 @@
+Package: AIExam
+Type: Package
+Title: Generates the exam for the Uppsala University AI course.
+Version: 1.0.3
+Author: Mike Ashcroft
+Maintainer: Mike Ashcroft <michael.ashcroft@it.uu.se>
+Description: Generates the exam for the Uppsala University AI course.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1

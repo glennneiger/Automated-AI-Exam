@@ -1,0 +1,9 @@
+f=function(n){
+  m1=matrix(c(sample(1:10000),sample(0:1,10000,T)),ncol=2)
+  m2=m1[which(m1[,1]==0),1,drop=F]
+  for (i in 1:n) {
+    m1_=m1[which(m1[,2]==0)
+      o=order(m1[which(m1[,2]==0),1])
+    m1[]
+  }  
+}

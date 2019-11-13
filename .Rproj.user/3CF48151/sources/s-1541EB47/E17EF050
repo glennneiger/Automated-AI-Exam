@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1535793236644.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E17EF050",
+    "lastKnownWriteTime" : 1536055042,
+    "last_content_update" : 1536055042621,
+    "path" : "~/My R Packages/AIExam/R/CNN.R",
+    "project_path" : "R/CNN.R",
+    "properties" : {
+        "cursorPosition" : "44,15",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

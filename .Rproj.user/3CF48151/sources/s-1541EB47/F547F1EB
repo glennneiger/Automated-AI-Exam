@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1535793052750.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F547F1EB",
+    "lastKnownWriteTime" : 1536055043,
+    "last_content_update" : 1536055043290,
+    "path" : "~/My R Packages/AIExam/R/ANN.R",
+    "project_path" : "R/ANN.R",
+    "properties" : {
+        "cursorPosition" : "49,39",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
